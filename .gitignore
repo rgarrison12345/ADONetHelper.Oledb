@@ -5,3 +5,4 @@
 /.vs/ADONetHelper.Oledb/v15
 /bin/Release
 /obj
+*.dtbcache
