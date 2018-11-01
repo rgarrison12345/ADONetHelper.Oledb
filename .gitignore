@@ -6,3 +6,4 @@
 /bin/Release
 /obj
 *.dtbcache
+/bin/Debug
