@@ -7,3 +7,5 @@
 /obj
 *.dtbcache
 /bin/Debug
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
