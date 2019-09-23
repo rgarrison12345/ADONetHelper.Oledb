@@ -1,6 +1,6 @@
 ﻿#region Licenses
 /*MIT License
-Copyright(c) 2018
+Copyright(c) 2019
 Robert Garrison
 
 Permission Is hereby granted, free Of charge, To any person obtaining a copy
@@ -35,6 +35,28 @@ namespace ADONetHelper.Oledb
     public class OledbClient : DbClient
     {
         #region Events
+        /// <summary>
+        /// Occurs when the provider returns a warning or informational message
+        /// </summary>
+        public event OleDbInfoMessageEventHandler InfoMessage
+        {
+            add
+            {
+                //Get an exclusive lock first
+                lock (this.ExecuteSQL.Connection)
+                {
+                    this.Connection.InfoMessage += value;
+                }
+            }
+            remove
+            {
+                //Get an exclusive lock first
+                lock (this.ExecuteSQL.Connection)
+                {
+                    this.Connection.InfoMessage -= value;
+                }
+            }
+        }
         #endregion
         #region Fields/Properties
         /// <summary>
