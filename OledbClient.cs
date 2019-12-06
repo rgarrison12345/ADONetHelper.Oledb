@@ -22,6 +22,7 @@ OUT Of Or In CONNECTION With THE SOFTWARE Or THE USE Or OTHER DEALINGS In THE
 SOFTWARE*/
 #endregion
 #region Using Statements
+using ADONetHelper.Core;
 using System.Data;
 using System.Data.OleDb;
 #endregion
@@ -43,17 +44,17 @@ namespace ADONetHelper.Oledb
             add
             {
                 //Get an exclusive lock first
-                lock (this.ExecuteSQL.Connection)
+                lock (ExecuteSQL.Connection)
                 {
-                    this.Connection.InfoMessage += value;
+                    Connection.InfoMessage += value;
                 }
             }
             remove
             {
                 //Get an exclusive lock first
-                lock (this.ExecuteSQL.Connection)
+                lock (ExecuteSQL.Connection)
                 {
-                    this.Connection.InfoMessage -= value;
+                    Connection.InfoMessage -= value;
                 }
             }
         }
@@ -68,7 +69,7 @@ namespace ADONetHelper.Oledb
             get
             {
                 //Return this back to the caller
-                return (OleDbConnection)this.ExecuteSQL.Connection;
+                return (OleDbConnection)ExecuteSQL.Connection;
             }
         }
         /// <summary>
@@ -78,7 +79,7 @@ namespace ADONetHelper.Oledb
         {
             get
             {
-                return this.Connection.Provider;
+                return Connection.Provider;
             }
         }
         #endregion
@@ -121,9 +122,9 @@ namespace ADONetHelper.Oledb
         {
         }
         #endregion
-        #region Methods        
+        #region Utility Methods        
         /// <summary>
-        /// Updates the <see cref="System.Data.ConnectionState"/> property of the current <see cref="OleDbConnection"/> object.
+        /// Updates the <see cref="ConnectionState"/> property of the current <see cref="OleDbConnection"/> object.
         /// </summary>
         /// <remarks>
         /// Some OLE DB providers can check the current state of the connection. 
@@ -137,7 +138,7 @@ namespace ADONetHelper.Oledb
         /// </remarks>
         public void ResetState()
         { 
-            this.Connection.ResetState();
+            Connection.ResetState();
         }
         #endregion
     }
