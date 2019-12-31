@@ -8,7 +8,7 @@
     <RepositoryType>git</RepositoryType>
     <Version>1.2.1</Version>
     <PackageTags>System.Data.Oledb Oledb ORM ADO.NET ADO SQL .NET Database RDBMS Generic DAL ANSI</PackageTags>
-    <Copyright>Copyright © Robert Garrison 2019</Copyright>
+    <Copyright>Copyright © Robert Garrison 2020</Copyright>
     <Authors>Robert Garrison</Authors>
     <Company>Robert Garrison</Company>
     <Product>ADONetHelper.Oledb</Product>
