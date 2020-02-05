@@ -6,7 +6,7 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/rgarrison12345/ADONetHelper.Oledb.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <PackageTags>System.Data.Oledb Oledb ORM ADO.NET ADO SQL .NET Database RDBMS Generic DAL ANSI</PackageTags>
     <Copyright>Copyright © Robert Garrison 2020</Copyright>
     <Authors>Robert Garrison</Authors>
@@ -15,7 +15,7 @@
     <Title>ADONetHelper.Oledb</Title>
     <PackageId>ADONetHelper.Oledb</PackageId>
     <Description>Extends ADONetHelper library to Oledb</Description>
-    <PackageReleaseNotes>Updating to ADONetHelper 4.0.2</PackageReleaseNotes>
+    <PackageReleaseNotes>Updating to ADONetHelper 4.0.8</PackageReleaseNotes>
     <AssemblyName>ADONetHelper.Oledb</AssemblyName>
     <RootNamespace>ADONetHelper.Oledb</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\ADONetHelper.Oledb.xml</DocumentationFile>
@@ -27,7 +27,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
-    <PackageReference Include="ADONetHelper" version="4.0.2" />
+    <PackageReference Include="ADONetHelper" version="4.0.8" />
     <PackageReference Include="System.Data.OleDb" version="4.7.0" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
